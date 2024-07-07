@@ -1,0 +1,15 @@
+#!/bin/sh
+FORMAT="$1"
+[ -n "$2" ] && SHORTFORMAT="$2" || SHORTFORMAT="$1"
+
+cat <<EOF
+%package ${FORMAT}
+Summary: Qt 6.x support for images in the ${FORMAT} format
+Group: System/Libraries
+
+%description ${FORMAT}
+Qt 6.x support for images in the ${FORMAT} format
+
+%files ${FORMAT}
+%{_libdir}/qt6/plugins/imageformats/kimg_${FORMAT}.so
+EOF
