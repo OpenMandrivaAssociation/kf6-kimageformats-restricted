@@ -18,7 +18,7 @@
 #define git 20240217
 
 Name: kf6-kimageformats
-Version: 6.3.0
+Version: 6.4.0
 Release: %{?git:0.%{git}.}1%{?extrarelsuffix}
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kimageformats/-/archive/master/kimageformats-master.tar.bz2#/kimageformats-%{git}.tar.bz2
@@ -70,8 +70,10 @@ Requires: %{name}-heif = %{EVRD}
 Requires: %{name}-jxl = %{EVRD}
 Requires: %{name}-kra = %{EVRD}
 Requires: %{name}-pcx = %{EVRD}
+Requires: %{name}-pfm = %{EVRD}
 Requires: %{name}-pic = %{EVRD}
 Requires: %{name}-psd = %{EVRD}
+Requires: %{name}-pxr = %{EVRD}
 Requires: %{name}-ora = %{EVRD}
 Requires: %{name}-qoi = %{EVRD}
 Requires: %{name}-ras = %{EVRD}
@@ -94,8 +96,10 @@ Plugins to allow QImage to support extra file formats.
 %{expand:%(sh %{SOURCE10} jxl)}
 %{expand:%(sh %{SOURCE10} kra)}
 %{expand:%(sh %{SOURCE10} pcx)}
+%{expand:%(sh %{SOURCE10} pfm)}
 %{expand:%(sh %{SOURCE10} pic)}
 %{expand:%(sh %{SOURCE10} psd)}
+%{expand:%(sh %{SOURCE10} pxr)}
 %{expand:%(sh %{SOURCE10} ora)}
 %{expand:%(sh %{SOURCE10} qoi)}
 %{expand:%(sh %{SOURCE10} ras)}
